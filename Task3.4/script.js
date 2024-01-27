@@ -1,33 +1,22 @@
-let a = null;
-let b = null
-let oper = "";
+let a = parseFloat(prompt("Введите a: "));
+let b = parseFloat(prompt("Введите b: "));
+let c = parseFloat(prompt("Введите c: "));
 
-do{
-    a = prompt("Введите первое число:");
-}while(a == "");
+let desc = b ** 2 + 4 * a * c;
 
-do{
-    b = prompt("Введите второе число:");
-}while(b == "");
-
-a = Number(a);
-b = Number(b);
-oper = prompt("Введите операцию(+ - / *):");
-
-alert("Результат операции: " + Calculate());
-
-function Calculate(){
-    switch(oper){
-        case "+":
-            return a + b;
-        case "-":
-            return a - b;
-        case "*":
-            return a * b;
-        case "/":
-            if(b == 0) return "Нельзя делить на ноль";
-            return a / b;
-        default:
-            return "Не верная операция";
-    }
+let x1 = 0;
+let x2 = 0;
+if(desc > 0){
+    x1 = (-b + Math.sqrt(desc)) / (a * 2);
+    x2 = (-b - Math.sqrt(desc)) / (a * 2);
 }
+else if(desc === 0){
+    x1 = -b / (a * 2);
+    x2 = x1;
+}
+else{
+    alert("Нет корней");
+    return;
+}
+
+alert("Ответ: " + x1 + " " + x2);
