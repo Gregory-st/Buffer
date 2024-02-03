@@ -1,0 +1,23 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.center{
+    display: flex;
+    justify-content: space-around;
+    margin: 10px 20px;
+}
+
+.block{
+    width: 250px;
+}
+
+.content{
+    border-color: black;
+    border-radius: 3px 20px 30px 30px;
+    border-width: 2px;
+    border-style: solid;
+    width: 350px;
+    height: 200px;
+}
